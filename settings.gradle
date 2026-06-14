@@ -19,6 +19,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url = uri("https://repo.camsys-apps.com/releases") }
+        maven { url = uri("https://github.com/CUTR-at-USF/cutr-mvn-repo/raw/master/snapshots") }
+        maven { url = uri("https://jitpack.io") }
     }
 }
 

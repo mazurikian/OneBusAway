@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2010-2014 Paul Watts (paulcwatts@gmail.com),
+    University of South Florida (sjbarbeau@gmail.com),
+    Benjamin Du (bendu@me.com),
+    Microsoft Corporation
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<resources>
+    <color name="theme_primary">@color/brand_color_dark</color>
+    <color name="theme_primary_brand">@color/brand_color</color>
+
+    <color name="body_text_1">#deffffff</color>
+    <color name="body_text_2">#8affffff</color>
+    <color name="body_text_3">#6fffffff</color>
+    <color name="body_text_disabled">#44ffffff</color>
+
+    <color name="body_text_1_inverse">#de000000</color>
+    <color name="body_text_2_inverse">#8a000000</color>
+
+    <color name="stop_info_arrival_list_background">@android:color/black</color>
+
+    <!-- Arrival times header -->
+    <color name="header_text_color">@color/body_text_1</color>
+
+    <!-- Trip Planning -->
+    <color name="trip_plan_label">@android:color/white</color>
+
+    <color name="md_theme_primary">#A1D39A</color>
+    <color name="md_theme_onPrimary">#0A390F</color>
+    <color name="md_theme_primaryContainer">#235024</color>
+    <color name="md_theme_onPrimaryContainer">#BCF0B4</color>
+
+    <color name="md_theme_secondary">#A8D292</color>
+    <color name="md_theme_onSecondary">#153808</color>
+    <color name="md_theme_secondaryContainer">#2C4F1D</color>
+    <color name="md_theme_onSecondaryContainer">#C4EFAC</color>
+
+    <color name="md_theme_error">#FFB4AB</color>
+    <color name="md_theme_onError">#690005</color>
+    <color name="md_theme_errorContainer">#93000A</color>
+    <color name="md_theme_onErrorContainer">#FFDAD6</color>
+
+    <color name="md_theme_background">#10140F</color>
+    <color name="md_theme_onBackground">#E0E4DB</color>
+    <color name="md_theme_surface">#10140F</color>
+    <color name="md_theme_onSurface">#E0E4DB</color>
+
+    <color name="md_theme_surfaceContainerLowest">#0B0F0A</color>
+    <color name="md_theme_surfaceContainerLow">#191D17</color>
+    <color name="md_theme_surfaceContainer">#1D211B</color>
+    <color name="md_theme_surfaceContainerHigh">#272B25</color>
+    <color name="md_theme_surfaceContainerHighest">#323630</color>
+</resources>

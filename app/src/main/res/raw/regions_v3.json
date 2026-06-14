@@ -1,0 +1,45 @@
+{
+  "version": 3,
+  "code": 200,
+  "text": "OK",
+  "data": {
+    "list": [
+      {
+        "id": 0,
+        "regionName": "Cuándo SUBO",
+        "sidecarBaseUrl": null,
+        "plausibleAnalyticsServerUrl": null,
+        "obaBaseUrl": "https://cuandosubo.sube.gob.ar/onebusaway-api-webapp/",
+        "siriBaseUrl": null,
+        "bounds": [
+          { "lat": -34.6037, "lon": -58.3816, "latSpan": 1.2, "lonSpan": 1.6 }
+        ],
+        "language": "es_AR",
+        "contactEmail": "",
+        "supportsObaDiscoveryApis": true,
+        "supportsObaRealtimeApis": true,
+        "supportsSiriRealtimeApis": false,
+        "active": true,
+        "obaVersionInfo": "",
+        "twitterUrl": "",
+        "facebookUrl": "",
+        "experimental": false,
+        "stopInfoUrl": null,
+        "open311Servers": [],
+        "otpBaseUrl": null,
+        "otpBaseGraphqlUrl": null,
+        "otpContactEmail": null,
+        "supportsEmbeddedSocial": false,
+        "supportsOtpBikeshare": false,
+        "supportsOtpGraphqlBikeshare": false,
+        "paymentAndroidAppId": null,
+        "paymentWarningTitle": null,
+        "paymentWarningBody": null,
+        "paymentiOSAppStoreIdentifier": null,
+        "paymentiOSAppUrlScheme": null,
+        "travelBehaviorDataCollectionEnabled": false,
+        "enrollParticipantsInStudy": false
+      }
+    ]
+  }
+}
