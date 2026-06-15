@@ -13,14 +13,21 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: set up JDK 11
-      uses: actions/setup-java@v4
+    - name: Setup Java JDK
+      uses: actions/setup-java@v5.2.0
       with:
-        java-version: '11'
+        java-version: '21'
         distribution: 'temurin'
         cache: gradle
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
-      run: ./gradlew build
+      run: ./gradlew :onebusaway-android:assembleObaGoogleDebug
+
+    - name: Upload Google Debug APK
+      uses: actions/upload-artifact@v4
+      with:
+        name: onebusaway-android-oba-google-debug
+        path: |
+          onebusaway-android/build/outputs/apk/**/*.apk
