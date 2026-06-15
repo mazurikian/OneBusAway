@@ -25,8 +25,8 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew :onebusaway-android:assembleObaGoogleDebug
 
-    - name: Upload Google Debug APK
-      uses: actions/upload-artifact@v4
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v7.0.1
       with:
         name: onebusaway-android-oba-google-debug
         path: |
