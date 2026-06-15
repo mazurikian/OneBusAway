@@ -15,17 +15,24 @@
  * limitations under the License.
  */
 
+import org.apache.tools.ant.filters.ConcatFilter
 
-plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.ksp)
-    alias(libs.plugins.play.publisher)
-    alias(libs.plugins.google.services)
-    alias(libs.plugins.firebase.crashlytics)
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.devtools.ksp'
+apply plugin: 'com.github.triplet.play'
+
+repositories {
+    maven {
+        // OBA Releases - for comparator to sort alphanumeric routes
+        url "https://repo.camsys-apps.com/releases"
+    }
+    maven {
+        // CUTR Releases
+        url "https://github.com/CUTR-at-USF/cutr-mvn-repo/raw/master/snapshots"
+    }
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
 }
-
-// Keep this ext property because the original dependency block references $kotlin_version.
-ext.kotlin_version = libs.versions.kotlin.get()
 
 android {
     compileSdk=36
@@ -61,6 +68,14 @@ android {
             buildConfigField "String", "MAP_FRAGMENT_CLASS", "\"org.onebusaway.android.map.googlemapsv2.BaseMapFragment\""
             buildConfigField "String", "MAP_HELPER_CLASS", "\"org.onebusaway.android.map.googlemapsv2.GoogleProprietaryMapHelper\""
             buildConfigField "String", "TRIP_MAP_FRAGMENT_CLASS", "\"org.onebusaway.android.map.googlemapsv2.tripmap.TripMapFragment\""
+        }
+
+        maplibre {
+            // MapLibre-based build using OpenFreeMap tiles - see src/maplibre
+            dimension "platform"
+            buildConfigField "String", "MAP_FRAGMENT_CLASS", "\"org.onebusaway.android.map.maplibre.MapLibreMapFragment\""
+            buildConfigField "String", "MAP_HELPER_CLASS", "\"org.onebusaway.android.map.maplibre.MapLibreProprietaryMapHelper\""
+            buildConfigField "String", "TRIP_MAP_FRAGMENT_CLASS", "\"org.onebusaway.android.map.maplibre.tripmap.TripMapFragment\""
         }
 
         // Brand flavors are loaded from separate files in flavors/ directory.
@@ -244,6 +259,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-messaging:24.1.0'
     // Google Play Services Maps (only for Google flavor)
     googleImplementation 'com.google.android.gms:play-services-maps:19.0.0'
+    // MapLibre GL Native (only for MapLibre flavor)
+    maplibreImplementation 'org.maplibre.gl:android-sdk:11.5.2'
     // Google Play Services Places is required by ProprietaryMapHelpV2 (only for Google flavor)
     googleImplementation 'com.google.android.libraries.places:places-compat:2.6.0'
     // Autocomplete text views with clear button for trip planning
@@ -275,6 +292,8 @@ dependencies {
 
 }
 
+apply plugin:'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
 
 play {
     // Path to the Google Play service account JSON key file.

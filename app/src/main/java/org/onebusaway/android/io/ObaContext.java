@@ -31,7 +31,7 @@ public class ObaContext {
 
     private static final String TAG = "ObaContext";
 
-    private String mApiKey = "v1_BktoDJ2gJlu6nLM6LsT9H8IUbWc=cGF1bGN3YXR0c0BnbWFpbC5jb20=";
+    private String mApiKey = "CuandoSUBO-Android-9b8a8543-b111-4caf-80b0-b81978707a0c";
 
     private int mAppVer = 0;
 

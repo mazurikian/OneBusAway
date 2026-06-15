@@ -317,7 +317,7 @@ public final class UIUtils {
         if (TextUtils.isEmpty(shortName)) {
             shortName = longName;
         }
-        if (!TextUtils.isEmpty(route.getDescription()) || TextUtils.isEmpty(longName) || shortName.equals(longName)) {
+        if (TextUtils.isEmpty(longName) || shortName.equals(longName)) {
             longName = route.getDescription();
         }
         return UIUtils.formatDisplayText(longName);
@@ -371,7 +371,7 @@ public final class UIUtils {
         if (TextUtils.isEmpty(shortName)) {
             shortName = longName;
         }
-        if (!TextUtils.isEmpty(route.getDescription()) || TextUtils.isEmpty(longName) || shortName.equals(longName)) {
+        if (TextUtils.isEmpty(longName) || shortName.equals(longName)) {
             longName = UIUtils.formatDisplayText(route.getDescription());
         }
 

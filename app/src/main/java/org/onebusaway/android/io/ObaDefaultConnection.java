@@ -36,8 +36,9 @@ public final class ObaDefaultConnection implements ObaConnection {
         Log.d(TAG, uri.toString());
         URL url = new URL(uri.toString());
         mConnection = (HttpURLConnection) url.openConnection();
-        mConnection.setRequestProperty("Authorization", "Bearer CuandoSUBO-Android-9b8a8543-b111-4caf-80b0-b70913425a0c");
         mConnection.setReadTimeout(30 * 1000);
+        ObaContext defaultContext = ObaApi.getDefaultContext();
+        mConnection.setRequestProperty("Authorization", "Bearer " + defaultContext.getApiKey());
     }
 
     @Override
