@@ -28,6 +28,6 @@ jobs:
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v7.0.1
       with:
-        name: onebusaway-android-oba-google-debug
+        name: app-oba-google-debug
         path: |
-          onebusaway-android/build/outputs/apk/**/*.apk
+          app/build/outputs/apk/**/*.apk
