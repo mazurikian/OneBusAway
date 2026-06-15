@@ -1,41 +1,20 @@
-/*
- * Copyright (C) 2013-2017 University of South Florida (sjbarbeau@gmail.com),
- * Microsoft Corporation.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+// Module-level build file for the Android app.
+// This file keeps the standard Android Studio plugin format while preserving
+// the original OneBusAway product flavors, BuildConfig fields, and dependencies.
 
-import org.apache.tools.ant.filters.ConcatFilter
-
-apply plugin: 'com.android.application'
-apply plugin: 'com.google.devtools.ksp'
-apply plugin: 'com.github.triplet.play'
-
-repositories {
-    maven {
-        // OBA Releases - for comparator to sort alphanumeric routes
-        url "https://repo.camsys-apps.com/releases"
-    }
-    maven {
-        // CUTR Releases
-        url "https://github.com/CUTR-at-USF/cutr-mvn-repo/raw/master/snapshots"
-    }
-    mavenCentral()
-    maven { url 'https://jitpack.io' }
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.play.publisher)
+    alias(libs.plugins.google.services)
+    alias(libs.plugins.firebase.crashlytics)
 }
 
+// Kotlin is built into AGP 9+, so no separate kotlin-android plugin is applied.
+def kotlin_version = libs.versions.kotlin.get()
+
 android {
-    compileSdk=36
+    compileSdk 36
 
     defaultConfig {
         minSdkVersion 21
@@ -123,9 +102,9 @@ android {
 
     buildTypes {
         release {
-            signingConfig=signingConfigs.release
-            minifyEnabled=true
-            shrinkResources=true
+            signingConfig signingConfigs.release
+            minifyEnabled true
+            shrinkResources true
             proguardFiles(getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt')
         }
     }
@@ -142,7 +121,7 @@ android {
     testOptions {
         unitTests.includeAndroidResources true
     }
-    namespace='org.onebusaway.android'
+    namespace 'org.onebusaway.android'
     lint {
         disable 'MissingTranslation', 'ExtraTranslation'
     }
@@ -292,8 +271,6 @@ dependencies {
 
 }
 
-apply plugin:'com.google.gms.google-services'
-apply plugin: 'com.google.firebase.crashlytics'
 
 play {
     // Path to the Google Play service account JSON key file.

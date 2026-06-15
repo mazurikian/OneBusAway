@@ -1,4 +1,33 @@
+pluginManagement {
+    repositories {
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
+            }
+        }
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
 plugins {
     id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
 }
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+
+        // OneBusAway/CUTR artifacts that are not published in Google's repository or Maven Central.
+        maven { url = uri("https://repo.camsys-apps.com/releases") }
+        maven { url = uri("https://github.com/CUTR-at-USF/cutr-mvn-repo/raw/master/snapshots") }
+
+        // Legacy/community Android libraries used by the original OneBusAway source.
+        maven { url = uri("https://jitpack.io") }
+    }
+}
+
+rootProject.name = "OneBusAway"
 include ':app'
