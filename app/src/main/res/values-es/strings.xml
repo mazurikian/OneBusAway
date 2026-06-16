@@ -23,7 +23,7 @@
     <!-- Navigation Drawer -->
     <string name="navdrawer_item_nearby">Cerca</string>
     <string name="navdrawer_item_starred_stops">Paradas favoritas</string>
-    <string name="navdrawer_item_starred_routes">Líneas favoritas</string>
+    <string name="navdrawer_item_starred_routes">Rutas favoritas</string>
     <string name="navdrawer_item_my_reminders">Mis recordatorios</string>
     <string name="navdrawer_item_settings">Configuración</string>
     <string name="navdrawer_item_help">Ayuda</string>
@@ -43,13 +43,13 @@
         información. Intenta de nuevo y puede que funcione.
     </string>
     <string name="generic_comm_error_toast">Error al actualizar. Lo intentaremos de nuevo en un minuto.</string>
-    <string name="route_not_found_error_no_region">Lo sentimos, la línea especificada no ha sido encontrada. Si
+    <string name="route_not_found_error_no_region">Lo sentimos, la ruta especificada no ha sido encontrada. Si
         este era un
         atajo, es probable que tú enlace este desactualizado, o una región no ha sido seleccionada aún
         (Cambialo en
         \"Preferencias-> Tú región\").
     </string>
-    <string name="route_not_found_error_with_region_name">Lo sentimos, esa línea especificada no puede ser
+    <string name="route_not_found_error_with_region_name">Lo sentimos, esa ruta especificada no puede ser
         encontrada. Si este era un
         atajo, es probable que tú enlace este desactualizado, o elegiste una región equivocada (Tú
         región actual es
@@ -133,16 +133,16 @@
     <string name="main_outofrange_yes">Llévame allí</string>
     <string name="main_outofrange_no">Quedarme donde estoy</string>
 
-    <string name="bus_options_menu_add_star">Adicionar la línea a favoritos</string>
-    <string name="bus_options_menu_remove_star">Remover la línea de favoritos</string>
+    <string name="bus_options_menu_add_star">Adicionar la ruta a favoritos</string>
+    <string name="bus_options_menu_remove_star">Remover la ruta de favoritos</string>
     <string name="bus_options_menu_show_vehicles_on_map">Mostrar vehículos en el mapa</string>
     <string name="bus_options_menu_show_trip_details">Mostrar el estado del viaje</string>
     <string name="bus_options_menu_set_reminder">Adicionar un recordatorio</string>
     <string name="bus_options_menu_edit_reminder">Editar este recordatorio</string>
-    <string name="bus_options_menu_show_only_this_route">Mostrar solamente esta línea</string>
-    <string name="bus_options_menu_show_route_schedule">Mostrar el horario de la línea</string>
+    <string name="bus_options_menu_show_only_this_route">Mostrar solamente esta ruta</string>
+    <string name="bus_options_menu_show_route_schedule">Mostrar el horario de la ruta</string>
     <string name="bus_options_menu_report_trip_problem">Reportar un problema con el viaje</string>
-    <string name="bus_options_menu_show_all_routes">Mostrar todas las líneas</string>
+    <string name="bus_options_menu_show_all_routes">Mostrar todas las rutas</string>
 
     <!--  Stop Info -->
     <string name="stop_info_ontime">A tiempo</string>
@@ -235,7 +235,7 @@
     <string name="stop_info_option_showonmap">Mostrar sobre el Mapa</string>
     <string name="menu_option_sort_by">Ordenar por</string>
     <string name="stop_info_option_refresh">Refrescar</string>
-    <string name="stop_info_option_filter">Filtrar líneas</string>
+    <string name="stop_info_option_filter">Filtrar rutas</string>
     <string name="stop_info_option_hide_header_arrivals">Ocultar las llegadas en el encabezado</string>
     <string name="stop_info_option_show_header_arrivals">Mostrar las llegadas en el encabezado</string>
     <string name="stop_info_option_editname">Editar el nombre de la parada</string>
@@ -285,8 +285,8 @@
     </plurals>
     <string name="stop_info_load_more_arrivals">Cargar más llegadas</string>
     <string name="stop_info_item_options_title">Opciones de bus</string>
-    <string name="stop_info_filter_title">Mostrar sólo estas líneas</string>
-    <string name="stop_info_filter_header">Mostrando %1$d de %2$d líneas</string>
+    <string name="stop_info_filter_title">Mostrar sólo estas rutas</string>
+    <string name="stop_info_filter_header">Mostrando %1$d de %2$d rutas</string>
     <string name="stop_info_filter_showall">(mostrar todas)</string>
     <string name="stop_info_save">Guardar</string>
     <string name="stop_info_cancel">Cancelar</string>
@@ -294,7 +294,7 @@
     <string name="stop_info_old_data">Datos actualizados el %s</string>
     <string name="stop_info_favorite">Parada Favorita</string>
     <string name="stop_info_official_stop_name_label">Nombre oficial: %1$s</string>
-    <string name="stop_info_route_ids_label">Líneas:</string>
+    <string name="stop_info_route_ids_label">Rutas:</string>
     <string name="stop_info_button_content_description">Acerca de esta parada</string>
     <string name="stop_info_frequency_approximate">~</string>
     <string name="stop_header_sliding_panel_open">El panel deslizante se expandió. Toque o presione el botón Atrás
@@ -315,34 +315,34 @@
     <string name="route_info_context_get_stop_info">Mostrar información de llegadas</string>
     <string name="route_info_context_showonmap">Mostrar sobre el mapa</string>
     <string name="route_info_goto_url">Ver horarios</string>
-    <string name="route_info_no_shape_data">Lo sentimos, no esta disponible la información del mapa para esta línea
+    <string name="route_info_no_shape_data">Lo sentimos, no esta disponible la información del mapa para esta ruta
     </string>
 
     <!-- My stops/routes -->
     <string name="my_recent_title">Reciente</string>
-    <string name="my_recent_menu_title">Paradas y Líneas recientes</string>
+    <string name="my_recent_menu_title">Paradas y Rutas recientes</string>
     <string name="my_recent_stops">Paradas</string>
-    <string name="my_recent_routes">Líneas</string>
+    <string name="my_recent_routes">Rutas</string>
     <string name="my_starred_title">Marcadas como favoritas</string>
     <string name="my_search_title">Buscar</string>
     <string name="my_no_recent_stops">No tienes paradas recientes.</string>
     <string name="my_no_starred_stops">No tienes paradas favoritas.\n\nPuedes adicionar paradas a favoritos en
         la pantalla de llegadas de los buses al tocar en la estrella al lado del nombre de la parada.
     </string>
-    <string name="my_no_recent_routes">No tienes líneas recientes.</string>
+    <string name="my_no_recent_routes">No tienes rutas recientes.</string>
     <!-- <string name="my_no_starred_routes">No tienes rutas favoritas.</string>-->
     <string name="route_favorite_options_title_star">Marcar como favorito a \"%s\" para:</string>
     <string name="route_favorite_options_title_unstar">Remover de favoritos a \"%s\" para:</string>
 
     <string name="my_option_clear_recent_stops">Limpiar paradas recientes</string>
-    <string name="my_option_clear_recent_routes">Limpiar líneas recientes</string>
+    <string name="my_option_clear_recent_routes">Limpiar rutas recientes</string>
     <string name="my_option_clear_starred_stops">Eliminar todas las paradas favoritas</string>
     <!-- <string name="my_option_clear_starred_routes">Eliminar todas las rutas favoritas</string>-->
     <string name="my_option_clear_confirm">¡No hay vuelta atrás! ¿Desea continuar?</string>
     <string name="my_option_clear_confirm_title">¿Estás seguro de esto?</string>
 
     <string name="my_context_get_stop_info">Mostrar información de llegadas</string>
-    <string name="my_context_get_route_info">Mostrar información de la línea</string>
+    <string name="my_context_get_route_info">Mostrar información de la ruta</string>
     <string name="my_context_create_shortcut">Crear un acceso directo en la pantalla de inicio</string>
     <string name="my_context_showonmap">Mostrar sobre el mapa</string>
     <string name="my_context_remove_recent">Remover de recientes</string>
@@ -352,14 +352,14 @@
     <string name="my_option_clear_recent_stops_title">¿Borrar paradas recientes?</string>
     <string name="my_option_clear_recent_stops_confirm">Esto eliminará permanentemente todas las paradas recientes.</string>
 
-    <string name="my_option_clear_recent_routes_title">¿Eliminar líneas recientes?</string>
-    <string name="my_option_clear_recent_routes_confirm">Esto eliminará permanentemente todas las líneas recientes.</string>
+    <string name="my_option_clear_recent_routes_title">¿Eliminar rutas recientes?</string>
+    <string name="my_option_clear_recent_routes_confirm">Esto eliminará permanentemente todas las rutas recientes.</string>
 
     <string name="my_option_clear_starred_stops_title">¿Quitar todas las paradas destacadas?</string>
     <string name="my_option_clear_starred_stops_confirm">Esto eliminará permanentemente todas las paradas marcadas con estrella.</string>
 
-    <string name="my_option_clear_starred_routes_title">¿Eliminar todas las líneas destacadas?</string>
-    <string name="my_option_clear_starred_routes_confirm">Esto eliminará permanentemente todas las líneas destacadas.</string>
+    <string name="my_option_clear_starred_routes_title">¿Eliminar todas las rutas destacadas?</string>
+    <string name="my_option_clear_starred_routes_confirm">Esto eliminará permanentemente todas las rutas destacadas.</string>
 
     <!-- Service Alerts  -->
     <string name="alert_content_description_warning">Advertencia sobre el Servicio - toque para deslizar hacia arriba
@@ -388,20 +388,20 @@
     <string name="find_hint_nofavoritestops">Encuentra una parada al ingresar su número en el cuadro de
         búsqueda.\n\nLos números de parada son 3 a 5 digitos y se pueden encontrar en la señal de la parada.
     </string>
-    <string name="find_hint_nofavoriteroutes">Encuentra una línea al entrar su nombre o número en
+    <string name="find_hint_nofavoriteroutes">Encuentra una ruta al entrar su nombre o número en
         el cuadro de búsqueda.
     </string>
     <string name="find_hint_noresults">No hay resultados que coincidan con su búsqueda.</string>
     <string name="search_stop_hint">Ingrese un número de parada</string>
-    <string name="search_route_hint">Ingrese un número/nombre de línea</string>
+    <string name="search_route_hint">Ingrese un número/nombre de ruta</string>
 
-    <string name="route_shortcut">Línea</string>
+    <string name="route_shortcut">Ruta</string>
     <string name="stop_shortcut">Parada</string>
     <string name="recent_stops_shortcut">Paradas recientes</string>
-    <string name="recent_routes_shortcut">Líneas recientes</string>
+    <string name="recent_routes_shortcut">Rutas recientes</string>
     <string name="starred_stops_shortcut">Paradas favoritas</string>
     <!-- <string name="starred_routes_shortcut">Rutas favoritas</string> -->
-    <string name="route_name">Línea %s</string>
+    <string name="route_name">Ruta %s</string>
 
     <!--  Trip info -->
     <string name="trip_info_name">Nombre del recordatorio</string>
@@ -421,7 +421,7 @@
     <string name="trip_info_repeat_weekdays">Días semanales (Lun-Vie)</string>
     <string name="trip_info_repeat_norepeat">Una vez</string>
     <string name="trip_info_noname">(sin nombre)</string>
-    <string name="trip_info_option_showroute">Mostrar la línea</string>
+    <string name="trip_info_option_showroute">Mostrar la ruta</string>
     <string name="trip_info_option_showstop">Mostrar las paradas</string>
     <string name="trip_info_separator">-</string>
 
@@ -457,15 +457,15 @@
     <string name="trip_list_context_edit">Editar el viaje</string>
     <string name="trip_list_context_delete">Borrar viaje</string>
     <string name="trip_list_context_showstop">Mostrar la parada</string>
-    <string name="trip_list_context_showroute">Mostrar la línea</string>
+    <string name="trip_list_context_showroute">Mostrar la ruta</string>
 
     <!--  Trip notifications -->
-    <string name="trip_stat_gone_arrived">La línea %s ha llegado.</string>
-    <string name="trip_stat_gone_departed">La línea %s ha salido.</string>
-    <string name="trip_stat_lessthanone_arriving">¡La línea %s está llegando ahora!</string>
-    <string name="trip_stat_lessthanone_departing">¡La línea %s está saliendo ahora!</string>
-    <string name="trip_stat_arriving">¡La línea %1$s está llegando en %2$d min!</string>
-    <string name="trip_stat_departing">¡La línea %1$s está saliendo en %2$d min!</string>
+    <string name="trip_stat_gone_arrived">La ruta %s ha llegado.</string>
+    <string name="trip_stat_gone_departed">La ruta %s ha salido.</string>
+    <string name="trip_stat_lessthanone_arriving">¡La ruta %s está llegando ahora!</string>
+    <string name="trip_stat_lessthanone_departing">¡La ruta %s está saliendo ahora!</string>
+    <string name="trip_stat_arriving">¡La ruta %1$s está llegando en %2$d min!</string>
+    <string name="trip_stat_departing">¡La ruta %1$s está saliendo en %2$d min!</string>
 
     <!--  Foreground Service notifications -->
     <string name="foreground_all_intent_title">Actualizando tus recordatorios</string>
@@ -814,7 +814,7 @@
     </string>
     <string name="tutorial_arrival_sort_title">Ordenar por ETA o rutas</string>
     <string name="tutorial_arrival_sort_text">Las llegadas puedes ser ordenadas por el tiempo estimado de llegada (ETA en inglés), u
-        ordenadas y agrupadas por línea usando el botón de \"Ordenar\" en la parte superior de la pantalla.
+        ordenadas y agrupadas por ruta usando el botón de \"Ordenar\" en la parte superior de la pantalla.
     </string>
     <string name="tutorial_arrival_header_star_route_title">Agrega rutas a favoritos</string>
     <string name="tutorial_arrival_header_star_route_text">Toca sobre la estrella para que tus rutas
@@ -958,7 +958,7 @@
     <string name="tripplanner_error_system">Por favor verifica tu conexión a Internet e intentalo de nuevo.
     </string>
     <string name="tripplanner_error_outside_bounds">El origen o el destino están por fuera de la red de cobertura de transporte</string>
-    <string name="tripplanner_error_path_not_found">No fue posible encontrar una línea entre el origen y el destino</string>
+    <string name="tripplanner_error_path_not_found">No fue posible encontrar una ruta entre el origen y el destino</string>
     <string name="tripplanner_error_no_transit_times">No se tienen información  de horarios de tránsito en las fechas seleccionadas</string>
     <string name="tripplanner_error_bogus_parameter">Algo salió mal. Cambia las opciones de viaje y vuelve a intentarlo.</string>
     <string name="tripplanner_error_geocode_from_not_found">El origen no fue encontrado</string>
@@ -1263,8 +1263,8 @@
     <string name="feedback_notify_confirmation">Gracias por compartir tus comentarios</string>
 
     <!-- Accessibility content descriptions for ETA rows -->
-    <string name="arrival_favorite_first_description">Guardar la primera línea como favorita</string>
-    <string name="arrival_favorite_second_description">Guardar la segunda línea como favorita</string>
+    <string name="arrival_favorite_first_description">Guardar la primera ruta como favorita</string>
+    <string name="arrival_favorite_second_description">Guardar la segunda ruta como favorita</string>
     <string name="arrival_reminder_first_description">Establecer recordatorio para la primera llegada</string>
     <string name="arrival_reminder_second_description">Establecer recordatorio para la segunda llegada</string>
     <string name="arrival_options_first_description">Opciones para la primera llegada</string>
