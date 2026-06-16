@@ -25,7 +25,6 @@ import android.view.MenuItem;
 import androidx.appcompat.widget.Toolbar;
 
 
-import org.onebusaway.android.BuildConfig;
 import org.onebusaway.android.R;
 import org.onebusaway.android.app.Application;
 import org.onebusaway.android.io.elements.ObaRegion;
@@ -33,7 +32,6 @@ import org.onebusaway.android.map.MapParams;
 import org.onebusaway.android.report.constants.ReportConstants;
 import org.onebusaway.android.report.ui.dialog.RegionValidateDialog;
 import org.onebusaway.android.ui.SettingsActivity;
-import org.onebusaway.android.util.BuildFlavorUtils;
 import org.onebusaway.android.util.LocationUtils;
 import org.onebusaway.android.util.PreferenceUtils;
 import org.onebusaway.android.util.UIUtils;
@@ -83,14 +81,6 @@ public class ReportActivity extends BaseReportActivity {
 
         boolean showDialog = currentRegion != null &&
                 (validatedRegionId == -1 || currentRegion.getId() != validatedRegionId);
-
-        if (showDialog) {
-            if (BuildConfig.FLAVOR_brand
-                    .equalsIgnoreCase(BuildFlavorUtils.AGENCYY_FLAVOR_BRAND)) {
-                // Don't show dialog for Agency Y build variant, because it's locked to a single region
-                showDialog = false;
-            }
-        }
 
         return showDialog;
     }

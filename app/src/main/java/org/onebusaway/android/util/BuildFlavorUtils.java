@@ -31,8 +31,6 @@ import org.onebusaway.android.app.Application;
 public class BuildFlavorUtils {
 
     public static final String OBA_FLAVOR_BRAND = "oba";
-    
-    public static final String AGENCYY_FLAVOR_BRAND = "agencyY";
 
     public static final int ARRIVAL_INFO_STYLE_A = 0; // Original OBA style
 
