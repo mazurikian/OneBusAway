@@ -87,8 +87,7 @@ internal object TripMapOverlayFactory {
                 ensureShape(tripId, shapeId)
                         ?: return fail(tripId, TripMapOverlayFailure.SHAPE_FETCH_FAILED)
 
-        val routeColor =
-                route?.color ?: ContextCompat.getColor(context, R.color.route_line_color_default)
+        val routeColor = ContextCompat.getColor(context, R.color.route_line_color_default)
         val vehiclePosition =
                 status?.takeIf { it.activeTripId == tripId }?.position?.let {
                     MapHelpV2.makeLatLng(it)
