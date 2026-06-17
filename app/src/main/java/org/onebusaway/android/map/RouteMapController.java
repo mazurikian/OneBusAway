@@ -428,9 +428,9 @@ public class RouteMapController implements MapModeController {
 
             mRoutePopup.show(route, response.getAgency(route.getAgencyId()).getName());
 
-            if (route.getColor() != null) {
-                mLineOverlayColor = route.getColor();
-            }
+           // if (route.getColor() != null) {
+               // mLineOverlayColor = route.getColor();
+           // }
 
             obaMapView.setRouteOverlay(mLineOverlayColor, response.getShapes());
 
