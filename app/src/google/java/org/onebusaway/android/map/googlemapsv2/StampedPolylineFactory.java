@@ -66,8 +66,8 @@ public final class StampedPolylineFactory {
         PolylineOptions opts = new PolylineOptions();
         opts.width(width);
         opts.zIndex(1f);
-        opts.addSpan(new StyleSpan(StrokeStyle.colorBuilder(color)
-                .stamp(mStamp).build()));
+       // opts.addSpan(new StyleSpan(StrokeStyle.colorBuilder(color)
+               // .stamp(mStamp).build()));
         for (Location l : points) {
             opts.add(MapHelpV2.makeLatLng(l));
         }
