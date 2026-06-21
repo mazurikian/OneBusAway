@@ -664,8 +664,6 @@
     <string name="preferences_analytics_summary">Ayudanos a mejorar la aplicación</string>
     <string name="preferences_tutorial_title">Mostrar tutorial</string>
     <string name="preferences_tutorial_summary">Aprende a utilizar la aplicación con este tutorial</string>
-    <string name="preferences_donate_title">Donar</string>
-    <string name="preferences_donate_summary">Apoyar el proyecto de código abierto %1$s</string>
     <string name="preferences_powered_by_oba_title">Desarrollado por %1$s</string>
     <string name="preferences_powered_by_oba_summary">Obtener más información sobre el proyecto de código abierto
     </string>
@@ -1165,19 +1163,6 @@
     <string name="preferred_temperature_unit">Unidad de temperatura preferida</string>
     <string name="fahrenheit">Fahrenheit</string>
     <string name="celsius">Celsius</string>
-    <string name="donation_view_title">🚨 %1$s necesita tu ayuda</string>
-    <string name="donation_view_body">Esta aplicación está actualmente desarrollada con un 100% de trabajo voluntario, y necesitamos que nos ayudes a financiar el desarrollo futuro.</string>
-    <string name="donation_view_learn_more_button">Aprender Más</string>
-    <string name="donation_view_donate_now_button">Donar Ahora</string>
-    <string name="donation_dismiss_dialog_title">Por favor, no ignores esta solicitud</string>
-    <string name="donation_dismiss_dialog_body">%1$s es una organización dirigida por voluntarios con casi ningún financiamiento. Necesitamos tu ayuda para mantener esta aplicación funcionando.</string>
-    <string name="donation_dismiss_dialog_dont_want_to_help_button">No Quiero Ayudar</string>
-    <string name="donation_dismiss_dialog_remind_me_later_button">Recuérdame Más Tarde</string>
-    <string name="donation_dismiss_dialog_cancel_button">Cancelar</string>
-    <string name="title_activity_donation_learn_more">Por qué necesitamos tu ayuda</string>
-    <string name="donation_learn_more_explanation">Tenemos grandes planes para mejorar %1$s, pero no podemos hacerlo sin tu ayuda. Esta aplicación está actualmente desarrollada con un 100%% de trabajo voluntario, y necesitamos que nos ayudes a financiar el desarrollo futuro.\n\nComo un proyecto clave de la Open Transit Software Foundation, una organización sin fines de lucro 501(c)(3), dependemos de la buena voluntad de usuarios como tú para seguir funcionando y mejorando este software.\n\nCada año, solo una pequeña fracción de nuestros usuarios dona, pero cada contribución, grande o pequeña, ayuda a asegurar que %1$s permanezca gratuito, actualizado y accesible para todos. Una pequeña donación, incluso solo el costo de una semana de viaje, $27.50, puede marcar la diferencia.\n\nTu contribución deducible de impuestos asegura que %1$s permanezca libre y accesible para todos. ¡Formemos juntos el futuro del transporte!\n\nGracias,\nEl equipo de %1$s</string>
-    <string name="preferences_reset_donation_timestamps_title">Restablecer las marcas de tiempo de donación</string>
-    <string name="preferences_reset_donation_timestamps_summary">Al tocar esta opción se borrarán las marcas de tiempo de \'Recuérdame más tarde\' y \'No me molestes\' asociadas con las solicitudes de donación.</string>
     <string name="preferences_show_weather_view">Mostrar vista del clima</string>
     <string name="show">Mostrar</string>
     <string name="preferences_preferred_maps_title">Tipo de Mapa Preferido</string>
@@ -1214,7 +1199,6 @@
     <string name="display_test_alerts">Mostrar alertas de prueba</string>
     <string name="display_test_wide_alerts_for_regions">Mostrar alertas de prueba amplias para regiones</string>
     <string name="no_description_available">No hay descripción disponible</string>
-    <string name="close_donation_card">Cerrar tarjeta de donación</string>
     <string name="send_email">Enviar correo electrónico</string>
     <string name="make_a_phone_call">Hacer una llamada</string>
     <string name="browse_the_web">Navegar por la web</string>

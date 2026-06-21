@@ -262,7 +262,6 @@ public class SettingsActivity extends AppCompatActivity
         private Preference mAnalyticsPref;
         private Preference mHideAlertsPref;
         private Preference mTutorialPref;
-        private Preference mDonatePref;
         private Preference mPoweredByObaPref;
         private Preference mAboutPref;
         private Preference mSaveBackup;
@@ -299,9 +298,6 @@ public class SettingsActivity extends AppCompatActivity
 
             mTutorialPref = findPreference(getString(R.string.preference_key_tutorial));
             mTutorialPref.setOnPreferenceClickListener(this);
-
-            mDonatePref = findPreference(getString(R.string.preferences_key_donate));
-            mDonatePref.setOnPreferenceClickListener(this);
 
             mPoweredByObaPref = findPreference(getString(R.string.preferences_key_powered_by_oba));
             mPoweredByObaPref.setOnPreferenceClickListener(this);
@@ -358,8 +354,6 @@ public class SettingsActivity extends AppCompatActivity
             if (aboutCategory != null) {
                 if (BuildFlavorUtils.isOBABuildFlavor()) {
                     aboutCategory.removePreference(mPoweredByObaPref);
-                } else {
-                    aboutCategory.removePreference(mDonatePref);
                 }
             }
 
@@ -411,8 +405,6 @@ public class SettingsActivity extends AppCompatActivity
                         null);
                 ShowcaseViewUtils.resetAllTutorials(requireContext());
                 NavHelp.goHome(requireActivity(), true);
-            } else if (pref.equals(mDonatePref)) {
-                startActivity(Application.getDonationsManager().buildOpenDonationsPageIntent());
             } else if (pref.equals(mPoweredByObaPref)) {
                 ObaAnalytics.reportUiEvent(mFirebaseAnalytics,
                         Application.get().getPlausibleInstance(),
@@ -610,11 +602,6 @@ public class SettingsActivity extends AppCompatActivity
                         getString(R.string.preferences_restore_summary, appName));
             }
 
-            if (mDonatePref != null) {
-                mDonatePref.setSummary(
-                        getString(R.string.preferences_donate_summary, appName));
-            }
-
             if (mPoweredByObaPref != null) {
                 mPoweredByObaPref.setTitle(
                         getString(R.string.preferences_powered_by_oba_title, appName));
@@ -641,8 +628,7 @@ public class SettingsActivity extends AppCompatActivity
         private Preference mCustomApiUrlPref;
         private Preference mCustomOtpApiUrlPref;
         private Preference mPushFirebaseData;
-        private Preference mResetDonationTimestamps;
-private FirebaseAnalytics mFirebaseAnalytics;
+        private FirebaseAnalytics mFirebaseAnalytics;
 
         @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -668,13 +654,7 @@ private FirebaseAnalytics mFirebaseAnalytics;
                 mPushFirebaseData.setOnPreferenceClickListener(this);
             }
 
-            mResetDonationTimestamps = findPreference(
-                    getString(R.string.preference_key_reset_donation_timestamps));
-            if (mResetDonationTimestamps != null) {
-                mResetDonationTimestamps.setOnPreferenceClickListener(this);
-            }
-
-if (BuildConfig.USE_FIXED_REGION) {
+            if (BuildConfig.USE_FIXED_REGION) {
                 Preference experimentalRegion = findPreference(
                         getString(R.string.preference_key_experimental_regions));
                 PreferenceCategory advancedCategory = findPreference(
@@ -705,9 +685,6 @@ if (BuildConfig.USE_FIXED_REGION) {
             if (pref.equals(mPushFirebaseData)) {
                 FirebaseDataPusher pusher = new FirebaseDataPusher();
                 pusher.push(requireContext());
-            } else if (pref.equals(mResetDonationTimestamps)) {
-                Application.getDonationsManager().setDonationRequestReminderDate(null);
-                Application.getDonationsManager().setDonationRequestDismissedDate(null);
             }
             return true;
         }

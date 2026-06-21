@@ -69,11 +69,6 @@
             android:name=".ui.survey.activities.SurveyWebViewActivity"
             android:exported="false" />
 
-        <activity
-            android:name=".ui.DonationLearnMoreActivity"
-            android:exported="false"
-            android:label="@string/title_activity_donation_learn_more"
-            android:parentActivityName=".ui.SettingsActivity" />
 
         <activity
             android:name="org.onebusaway.android.ui.SearchActivity"

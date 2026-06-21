@@ -14,7 +14,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import org.onebusaway.android.R;
 import org.onebusaway.android.app.Application;
-import org.onebusaway.android.donations.DonationsManager;
 import org.onebusaway.android.io.elements.ObaStop;
 import org.onebusaway.android.io.request.survey.model.StudyResponse;
 import org.onebusaway.android.ui.survey.SurveyPreferences;
@@ -387,14 +386,6 @@ public class SurveyUtils {
         Date reminderDate = getSurveyRequestReminderDate(context);
         if (reminderDate != null && reminderDate.after(new Date())) {
             return false;
-        }
-
-        // If the survey view is not visible on stops, perform additional checks
-        if (!isVisibleOnStops) {
-            DonationsManager donationsManager = Application.getDonationsManager();
-            // If the donation UI is visible, do not show the survey on the map
-            // Otherwise, show the survey on the map
-            return !donationsManager.shouldShowDonationUI();
         }
 
         return true;
