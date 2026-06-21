@@ -30,7 +30,6 @@
     <string name="preference_key_auto_select_region">preference_auto_select_region</string>
     <string name="preference_key_experimental_regions">preference_experimental_regions</string>
     <string name="preferences_key_analytics">preference_google_analytics</string>
-    <string name="preferences_key_donate">preference_donate</string>
     <string name="preferences_key_powered_by_oba">preference_powered_by_oba</string>
     <string name="preferences_key_about">preference_about</string>
     <string name="preference_key_preferred_units">preference_preferred_units</string>
@@ -90,9 +89,6 @@
 
     <!-- Alerts API Endpoint -->
     <string name="alerts_api_endpoint">/api/v1/regions/regionID/alerts.pb</string>
-
-    <!-- Donate URL -->
-    <string name="donate_url">https://opentransitsoftwarefoundation.org/donate/</string>
 
     <!-- Powered by OBA URL -->
     <string name="powered_by_oba_url">https://onebusaway.org</string>
@@ -156,7 +152,6 @@
     <string name="analytics_label_button_press_feedback">send_feedback</string>
     <string name="analytics_label_button_press_open_source">github</string>
     <string name="analytics_label_button_press_tutorial">preference_tutorial</string>
-    <string name="analytics_label_button_press_donate">preference_donate</string>
     <string name="analytics_label_button_press_powered_by_oba">preference_power_by_oba</string>
     <string name="analytics_label_button_press_about">preference_about</string>
     <string name="analytics_label_button_press_stopinfo">Loaded StopInfo from\u0020</string>
@@ -269,7 +264,6 @@
     <string name="analytics_label_custom_metadata_feedback">FeedbackText</string>
 
     <string name="not_request_battery_optimizations_key">request_battery_optimizations_key</string>
-    <string name="preference_key_reset_donation_timestamps">preference_key_reset_donation_timestamps</string>
 
     <!-- Firebase Messaging User Token -->
     <string name="firebase_messaging_token">firebase_messaging_token</string>

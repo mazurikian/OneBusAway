@@ -10,7 +10,6 @@ object PlausibleAnalytics {
     private const val REPORT_VIEW_STOP_EVENT_URL = "app://localhost/stop"
     const val REPORT_SEARCH_EVENT_URL = "app://localhost/search"
     const val REPORT_REGION_EVENT_URL = "app://localhost/regions"
-    const val REPORT_DONATE_EVENT_URL = "app://localhost/donations"
     const val REPORT_MAP_EVENT_URL = "app://localhost/map"
     const val REPORT_ARRIVALS_EVENT_URL = "app://localhost/arrivals"
     const val REPORT_FARE_PAYMENT_EVENT_URL = "app://localhost/fare-payment"

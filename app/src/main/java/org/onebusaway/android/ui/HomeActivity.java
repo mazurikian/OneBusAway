@@ -30,7 +30,6 @@ import org.onebusaway.android.R;
 import org.onebusaway.android.io.PlausibleAnalytics;
 import org.onebusaway.android.widealerts.GtfsAlertCallBack;
 import org.onebusaway.android.app.Application;
-import org.onebusaway.android.donations.DonationsManager;
 import org.onebusaway.android.io.ObaAnalytics;
 import org.onebusaway.android.io.elements.ObaRegion;
 import org.onebusaway.android.io.elements.ObaRoute;
@@ -94,7 +93,6 @@ import android.view.ViewGroup;
 import android.view.accessibility.AccessibilityManager;
 import android.view.animation.Animation;
 import android.view.animation.Transformation;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -113,9 +111,7 @@ import java.util.List;
 
 import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatImageButton;
 import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
@@ -202,7 +198,6 @@ public class HomeActivity extends AppCompatActivity
 
     View mSurveyView;
 
-    View mDonationView;
 
     private FloatingActionButton mFabMyLocation;
 
@@ -433,7 +428,6 @@ public class HomeActivity extends AppCompatActivity
 
         UIUtils.setupActionBar(this);
 
-        setupDonationView(this);
 
         // To enable checkBatteryOptimizations, also uncomment the
         // REQUEST_IGNORE_BATTERY_OPTIMIZATIONS permission in AndroidManifest.xml
@@ -516,7 +510,6 @@ public class HomeActivity extends AppCompatActivity
 
         mFabMyLocation.requestLayout();
 
-        updateDonationsUIVisibility();
     }
 
     @Override
@@ -652,7 +645,6 @@ public class HomeActivity extends AppCompatActivity
                 startActivity(i);
                 break;
         }
-        updateDonationsUIVisibility();
         if (mCurrentNavDrawerPosition != NAVDRAWER_ITEM_NEARBY) {
             // Hide survey view unless it's on the map
             SurveyViewUtils.hideSurveyView(mSurveyView);
@@ -2137,75 +2129,7 @@ public class HomeActivity extends AppCompatActivity
         Log.d(TAG,"Weather Request Fail");
     }
 
-    private void setupDonationView(HomeActivity homeActivity) {
-        mDonationView = findViewById(R.id.donationView);
-        AppCompatImageButton closeButton = mDonationView.findViewById(R.id.btnDonationViewClose);
-        Button learnMoreButton = mDonationView.findViewById(R.id.btnDonationViewLearnMore);
-        Button donateButton = mDonationView.findViewById(R.id.btnDonationViewDonate);
 
-        // Update title with app name for white-label support
-        TextView titleView = mDonationView.findViewById(R.id.textView2);
-        titleView.setText(getString(R.string.donation_view_title, getString(R.string.app_name)));
-
-        closeButton.setOnClickListener(b -> {
-            AlertDialog dismissDialog = buildDismissDonationsDialog();
-            dismissDialog.show();
-        });
-
-        learnMoreButton.setOnClickListener(b -> {
-            Intent intent = new Intent(this, DonationLearnMoreActivity.class);
-            startActivity(intent);
-        });
-
-        donateButton.setOnClickListener(b -> {
-            DonationsManager donationsManager = Application.getDonationsManager();
-            donationsManager.dismissDonationRequests();
-
-            Intent intent = donationsManager.buildOpenDonationsPageIntent();
-            startActivity(intent);
-        });
-
-        updateDonationsUIVisibility();
-    }
-
-    private void updateDonationsUIVisibility() {
-        mDonationView = findViewById(R.id.donationView);
-        if(mDonationView == null) return;
-        DonationsManager donationsManager = Application.getDonationsManager();
-
-        if (donationsManager.shouldShowDonationUI() && mCurrentNavDrawerPosition == NAVDRAWER_ITEM_NEARBY) {
-            mDonationView.setVisibility(View.VISIBLE);
-        }
-        else {
-            mDonationView.setVisibility(View.GONE);
-        }
-    }
-
-    /**
-     * Creates an AlertDialog that will give the user options for dismissing the donations UI.
-     * @return the AlertDialog for presentation.
-     */
-    private AlertDialog buildDismissDonationsDialog() {
-        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this)
-                .setTitle(R.string.donation_dismiss_dialog_title)
-                .setMessage(getString(R.string.donation_dismiss_dialog_body, getString(R.string.app_name)))
-                .setNegativeButton(
-                        R.string.donation_dismiss_dialog_dont_want_to_help_button,
-                        (dialog, which) -> {
-                            Application.getDonationsManager().dismissDonationRequests();
-                            updateDonationsUIVisibility();
-                        }
-                )
-                .setNeutralButton(R.string.donation_dismiss_dialog_remind_me_later_button,
-                        (dialog, which) -> {
-                            Application.getDonationsManager().remindUserLater();
-                            updateDonationsUIVisibility();
-                        })
-                .setPositiveButton(R.string.donation_dismiss_dialog_cancel_button, (d, w) -> {})
-                .setCancelable(true);
-
-        return builder.create();
-    }
     private void initSurveyView(){
         mSurveyView = findViewById(R.id.surveyView);
     }
