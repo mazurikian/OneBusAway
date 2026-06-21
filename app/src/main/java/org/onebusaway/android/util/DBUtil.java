@@ -60,7 +60,7 @@ public class DBUtil {
         if (TextUtils.isEmpty(shortName)) {
             shortName = longName;
         }
-        if (TextUtils.isEmpty(longName) || shortName.equals(longName)) {
+        if (!TextUtils.isEmpty(route.getDescription()) || TextUtils.isEmpty(longName) || shortName.equals(longName)) {
             longName = route.getDescription();
         }
 
