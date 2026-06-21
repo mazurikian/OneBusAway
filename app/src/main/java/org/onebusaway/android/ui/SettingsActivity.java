@@ -358,6 +358,8 @@ public class SettingsActivity extends AppCompatActivity
             if (aboutCategory != null) {
                 if (BuildFlavorUtils.isOBABuildFlavor()) {
                     aboutCategory.removePreference(mPoweredByObaPref);
+                } else {
+                    aboutCategory.removePreference(mDonatePref);
                 }
             }
 

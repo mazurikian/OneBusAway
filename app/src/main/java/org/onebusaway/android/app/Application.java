@@ -43,6 +43,7 @@ import com.onebusaway.plausible.android.Plausible;
 
 import org.onebusaway.android.BuildConfig;
 import org.onebusaway.android.R;
+import org.onebusaway.android.donations.DonationsManager;
 import org.onebusaway.android.io.ObaAnalytics;
 import org.onebusaway.android.io.ObaApi;
 import org.onebusaway.android.io.elements.ObaRegion;
@@ -80,6 +81,7 @@ public class Application extends android.app.Application {
 
     private SharedPreferences mPrefs;
 
+    private DonationsManager mDonationsManager;
 
     private GtfsAlerts mGtfsAlerts;
 
@@ -123,6 +125,7 @@ public class Application extends android.app.Application {
 
         initFirebaseMessaging();
 
+        mDonationsManager = new DonationsManager(mPrefs, mFirebaseAnalytics, getResources(), getAppLaunchCount());
 
         mGtfsAlerts = new GtfsAlerts(getApplicationContext());
     }
@@ -149,6 +152,7 @@ public class Application extends android.app.Application {
         return get().mPrefs;
     }
 
+    public static DonationsManager getDonationsManager() { return get().mDonationsManager; }
 
     public static GtfsAlerts getGtfsAlerts() {
         return get().mGtfsAlerts;

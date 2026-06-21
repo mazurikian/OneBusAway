@@ -163,6 +163,10 @@
             android:summary="@string/preferences_tutorial_summary"
             android:title="@string/preferences_tutorial_title" />
         <Preference
+            android:key="@string/preferences_key_donate"
+            android:summary="@string/preferences_donate_summary"
+            android:title="@string/preferences_donate_title" />
+        <Preference
             android:key="@string/preferences_key_powered_by_oba"
             android:summary="@string/preferences_powered_by_oba_summary"
             android:title="@string/preferences_powered_by_oba_title" />
