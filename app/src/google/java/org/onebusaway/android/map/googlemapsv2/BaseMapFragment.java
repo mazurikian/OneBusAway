@@ -60,7 +60,7 @@ import org.onebusaway.android.map.googlemapsv2.bike.BikeStationOverlay;
 import org.onebusaway.android.region.ObaRegionsTask;
 import org.onebusaway.android.ui.HomeActivity;
 import org.onebusaway.android.ui.LayersSpeedDialAdapter;
-import org.onebusaway.android.region.RegionStatusCallback;
+import org.onebusaway.android.ui.weather.RegionCallback;
 import org.onebusaway.android.util.LocationHelper;
 import org.onebusaway.android.util.LocationUtils;
 import org.onebusaway.android.util.PermissionUtils;
@@ -703,8 +703,8 @@ public class BaseMapFragment extends SupportMapFragment
         // Make sure that the stop overlay has been successfully initialized
         if (setupStopOverlay() && stops != null) {
             mStopOverlay.populateStops(stops, refs);
-            // When stops are available, notify listeners that the current region is valid
-            notifyRegionStatus(false);
+            // When we have stops that means we have a valid region to get the weather
+            checkRegionWeather(false);
         }
     }
 
@@ -733,8 +733,8 @@ public class BaseMapFragment extends SupportMapFragment
                 showDialog(MapDialogFragment.OUTOFRANGE_DIALOG);
             }
         }
-        // Notify listeners that the current map position is out of range
-        notifyRegionStatus(true);
+        // Notify weather view that we are out of range
+        checkRegionWeather(true);
     }
 
     //
@@ -759,7 +759,7 @@ public class BaseMapFragment extends SupportMapFragment
                 setMyLocation(true, false);
             } else {
                 zoomToRegion();
-                notifyRegionStatus(false);
+                checkRegionWeather(false);
             }
         }
     }
@@ -890,18 +890,19 @@ public class BaseMapFragment extends SupportMapFragment
         }
     }
 
-    private RegionStatusCallback regionStatusCallback;
+    private RegionCallback regionCallback;
 
-    public void setRegionStatusCallback(RegionStatusCallback callback) {
-        this.regionStatusCallback = callback;
+    public void setRegionCallback(RegionCallback callback) {
+        this.regionCallback = callback;
     }
 
-    public void notifyRegionStatus(boolean isOutOfRange) {
+    public void checkRegionWeather(boolean isOutOfRange) {
+        // If we have a valid region, callback to home activity to get the weather.
         ObaRegion region = Application.get().getCurrentRegion();
         boolean isValid = (region != null && mMap != null && !isOutOfRange);
 
-        if (regionStatusCallback != null) {
-            regionStatusCallback.onRegionStatusChanged(isValid);
+        if (regionCallback != null) {
+            regionCallback.onValidRegion(isValid);
         }
     }
 
@@ -1326,7 +1327,7 @@ public class BaseMapFragment extends SupportMapFragment
                             (dialog, which) -> {
                                 if (mMapFragment != null && mMapFragment.isAdded()) {
                                     mMapFragment.zoomToRegion();
-                                    mMapFragment.notifyRegionStatus(false);
+                                    mMapFragment.checkRegionWeather(false);
                                 }
                             }
                     )

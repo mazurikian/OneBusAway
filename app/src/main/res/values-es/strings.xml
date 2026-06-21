@@ -915,6 +915,10 @@
         estos íconos bajo la licencia Apache v2.0 (https://www.apache.org/licenses/LICENSE-2.0) ha enriquecido enormemente nuestra experiencia de usuario.
       </p>
       <p>
+    Agradecimiento especial a amCharts por los iconos del clima en SVG gratuitos (https://www.amcharts.com/free-animated-svg-weather-icons/),
+    estos íconos están bajo la licencia Creative Commons Attribution 4.0 (https://creativecommons.org/licenses/by/4.0/).
+     </p>
+      <p>
 
     <p>
       ¡Explora nuestra aplicación y emprende un viaje en transporte público sin contratiempos con %1$s!
@@ -1155,6 +1159,11 @@
     <string name="trip_info_grant_exact_alarms_permission_message">Debes otorgar permiso a la aplicación para programar un recordatorio.</string>
     <string name="trip_info_grant_exact_alarms_permission_positive_button">Otorgar permiso</string>
     <string name="trip_info_grant_exact_alarms_permission_negative_button">Cancelar</string>
+
+    <string name="preferred_temperature_unit">Unidad de temperatura preferida</string>
+    <string name="fahrenheit">Fahrenheit</string>
+    <string name="celsius">Celsius</string>
+    <string name="preferences_show_weather_view">Mostrar vista del clima</string>
     <string name="show">Mostrar</string>
     <string name="preferences_preferred_maps_title">Tipo de Mapa Preferido</string>
     <string name="preferences_preferred_map_option_normal2d">Mapa predeterminado</string>
@@ -1178,6 +1187,7 @@
     <string name="remind_me_latter">Recordármelo más tarde</string>
     <string name="survey_dismiss_dialog_skip_this_survey">Omitir esta encuesta</string>
     <string name="dismiss_survey_dialog_body">Tu opinión ayuda a mejorar los servicios de tránsito y las experiencias en la aplicación.</string>
+    <string name="preferences_show_weather_view_on_map">Mostrar la vista del clima en el mapa</string>
     <string name="failed_to_set_reminder">Error al establecer el recordatorio</string>
     <string name="reminder_not_enabled">Recordatorio no habilitado</string>
     <string name="stop_added_to_favorites">Parada añadida a favoritos</string>

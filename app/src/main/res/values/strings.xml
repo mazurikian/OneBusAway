@@ -996,6 +996,10 @@
         which add a touch of elegance to our app. Their generosity in licensing
         these icons under Apache v2.0(https://www.apache.org/licenses/LICENSE-2.0) has greatly enriched our user experience.
       </p>
+        <p>
+        Special thanks to amcharts for free SVG weather icons(https://www.amcharts.com/free-animated-svg-weather-icons/),
+        these icons under Creative Commons Attribution 4.0 (https://creativecommons.org/licenses/by/4.0/).
+      </p>
       <p>
 
     <p>
@@ -1260,9 +1264,13 @@
     <string name="travel_behavior_dialog_opt_out_message">If you opt out of the research study, we won\'t receive any more information about your travel behavior to help improve public transit.</string>
     <string name="cancel">Cancel</string>
     <string name="my_option_clear_starred_routes">Remove all starred routes</string>
+    <string name="preferred_temperature_unit">Preferred temperature unit</string>
+    <string name="fahrenheit">Fahrenheit</string>
+    <string name="celsius">Celsius</string>
     <!-- Note: %1$s is replaced with app_name for white-label support -->
     <!-- Note: %1$s is replaced with app_name for white-label support -->
     <!-- Note: %1$s is replaced with app_name for white-label support -->
+    <string name="preferences_show_weather_view">Show weather view</string>
     <string name="show">Show</string>
     <string name="preferences_preferred_maps_title">Preferred Map Type</string>
     <string name="preferences_preferred_map_option_normal2d">Default Map</string>
@@ -1287,6 +1295,7 @@
     <string name="remind_me_latter">Remind Me Later</string>
     <string name="survey_dismiss_dialog_skip_this_survey">Skip This Survey</string>
     <string name="dismiss_survey_dialog_body">Your feedback helps improve transit services and app experiences.</string>
+    <string name="preferences_show_weather_view_on_map">Display the weather view on the map</string>
     <string name="failed_to_set_reminder">Failed to set reminder</string>
     <string name="reminder_not_enabled">Reminder not enabled</string>
     <string name="stop_added_to_favorites">Stop added to favorites</string>
