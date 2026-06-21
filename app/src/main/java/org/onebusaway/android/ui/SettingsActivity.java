@@ -268,7 +268,6 @@ public class SettingsActivity extends AppCompatActivity
         private Preference mRestoreBackup;
         private Preference mRingtonePref;
         private ListPreference mPreferredUnits;
-        private ListPreference mPreferredTempUnits;
         private ListPreference mThemePref;
         private ListPreference mMapMode;
         private FirebaseAnalytics mFirebaseAnalytics;
@@ -309,9 +308,6 @@ public class SettingsActivity extends AppCompatActivity
             mMapMode.setOnPreferenceChangeListener(this);
 
             mPreferredUnits = findPreference(getString(R.string.preference_key_preferred_units));
-
-            mPreferredTempUnits = findPreference(
-                    getString(R.string.preference_key_preferred_temperature_units));
 
             mThemePref = findPreference(getString(R.string.preference_key_app_theme));
             mThemePref.setOnPreferenceChangeListener(this);
@@ -368,7 +364,6 @@ public class SettingsActivity extends AppCompatActivity
 
             changePreferenceSummary(getString(R.string.preference_key_region));
             changePreferenceSummary(getString(R.string.preference_key_preferred_units));
-            changePreferenceSummary(getString(R.string.preference_key_preferred_temperature_units));
             changePreferenceSummary(getString(R.string.preference_key_app_theme));
             changePreferenceSummary(getString(R.string.preference_key_map_mode));
 
@@ -547,9 +542,6 @@ public class SettingsActivity extends AppCompatActivity
                     getString(R.string.preference_key_show_negative_arrivals))) {
                 boolean showDepartedBuses = sharedPreferences.getBoolean(key, false);
                 ObaAnalytics.setShowDepartedVehicles(mFirebaseAnalytics, showDepartedBuses);
-            } else if (key.equalsIgnoreCase(
-                    getString(R.string.preference_key_preferred_temperature_units))) {
-                changePreferenceSummary(key);
             } else if (key.equalsIgnoreCase(getString(R.string.preference_key_map_mode))) {
                 changePreferenceSummary(key);
             }
@@ -571,9 +563,6 @@ public class SettingsActivity extends AppCompatActivity
             } else if (preferenceKey.equalsIgnoreCase(
                     getString(R.string.preference_key_app_theme))) {
                 mThemePref.setSummary(mThemePref.getValue());
-            } else if (preferenceKey.equalsIgnoreCase(
-                    getString(R.string.preference_key_preferred_temperature_units))) {
-                mPreferredTempUnits.setSummary(mPreferredTempUnits.getValue());
             } else if (preferenceKey.equalsIgnoreCase(
                     getString(R.string.preference_key_map_mode))) {
                 mMapMode.setSummary(mMapMode.getValue());
