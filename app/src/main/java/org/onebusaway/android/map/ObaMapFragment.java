@@ -24,7 +24,7 @@ import androidx.fragment.app.Fragment;
 import org.onebusaway.android.BuildConfig;
 import org.onebusaway.android.io.elements.ObaRoute;
 import org.onebusaway.android.io.elements.ObaStop;
-import org.onebusaway.android.ui.weather.RegionCallback;
+import org.onebusaway.android.region.RegionStatusCallback;
 import org.opentripplanner.routing.bike_rental.BikeRentalStation;
 
 import java.util.HashMap;
@@ -97,7 +97,7 @@ public interface ObaMapFragment extends MapModeController.ObaMapView {
 
     void setOnLocationPermissionResultListener(OnLocationPermissionResultListener listener);
 
-    void setRegionCallback(RegionCallback callback);
+    void setRegionStatusCallback(RegionStatusCallback callback);
 
     // ========================================================================
     // Map-specific operations (beyond ObaMapView)
