@@ -315,7 +315,7 @@ public final class QueryUtils {
                 if (TextUtils.isEmpty(shortName)) {
                     shortName = longName;
                 }
-                if (!TextUtils.isEmpty(routeInfo.getDescription()) || TextUtils.isEmpty(longName) || shortName.equals(longName)) {
+                if (TextUtils.isEmpty(longName) || shortName.equals(longName)) {
                     longName = routeInfo.getDescription();
                 }
 
